@@ -9,20 +9,20 @@ public class Hat implements Parcelable {
 
     private String title;
     private int image;
-    private BigDecimal price;
+    private String descrip;
     private int serial_number;
 
-    public Hat(String title, int image, BigDecimal price, int serial_number) {
+    public Hat(String title, int image, String descrip, int serial_number) {
         this.title = title;
         this.image = image;
-        this.price = price;
+        this.descrip = descrip;
         this.serial_number = serial_number;
     }
 
     public Hat(Hat product) {
         this.title = product.title;
         this.image = product.image;
-        this.price = product.price;
+        this.descrip = product.descrip;
         this.serial_number = product.serial_number;
     }
 
@@ -53,13 +53,13 @@ public class Hat implements Parcelable {
         this.serial_number = serial_number;
     }
 
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+//    public String getPrice() {
+//        return descrip;
+//    }
+//
+//    public void setPrice(String descrip) {
+//        this.descrip = descrip;
+//    }
 
     public String getTitle() {
         return title;
@@ -75,6 +75,14 @@ public class Hat implements Parcelable {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public String getDescrip() {
+        return descrip;
+    }
+
+    public void setDescrip(String descrip) {
+        this.descrip = descrip;
     }
 
     @Override
